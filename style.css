@@ -1,0 +1,331 @@
+        /* Css Variables */
+        :root{
+            --primary-color: #1b5e20;
+            --primary-light: #E5F6EE;
+            --title-color: #01331D;
+            --primary-dark: #003300;
+        }
+        /* Reset styles */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+        }
+        ul{
+            padding: 0;
+            margin-bottom: 0;
+        }
+        li{
+            list-style-type: none;
+        }
+        /* Body styles */
+        body{
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Written styles */
+        .timer{
+            height: 100vh;
+            overflow: hidden;
+            padding-top: 5px;
+        }
+        .header{
+            display:flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 15px;
+            background-color: #eee;
+            padding: 15px;
+            border-radius: 20px;
+        }
+        .left{
+            /* position: fixed; */
+            /* width: 300px; */
+            /* height: 100%; */
+            left: 15px;
+        }
+        .header h1{
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 60px;
+            /* margin-top: 25px; */
+            color: var(--title-color);
+            display: inline-block;
+            /* margin-bottom: 20px; */
+        }
+        .timer .logo{
+            width: 600px;
+            /* padding: 20px; */
+        }
+        /* .timer .content-wrapper h1{
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 60px;
+            margin-top: 25px;
+            color: var(--title-color);
+            margin-bottom: 20px;
+        } */
+        .info-pill{
+            display: inline-block;
+            border-radius: 30px;
+            border: 2px solid var(--primary-color);
+            font-size: 16px;
+            background: var(--primary-light);
+            padding: 10px 20px;
+            color: var(--primary-color);
+            font-weight: 500;
+            float: right;
+            /* margin-bottom: 35px; */
+        }
+        .exams-wrapper .title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .exams-wrapper .title h5{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .exams-wrapper .title a{
+            height: 45px;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            background: #084298;
+            color: white;
+            border-radius: 30px;
+            font-weight: 500;
+            transition: 200ms ease-in-out;
+        }
+        .exams-wrapper .title a:hover{
+            background: var(--primary-dark);
+        }
+        .exams-wrapper .exams{
+            overflow-y: auto;
+            padding-right: 25px;
+            padding-bottom: 20px;
+            height: calc(100vh - 210px);
+        }
+        .exams-wrapper .exams::-webkit-scrollbar{
+            width: 5px;
+            border-radius: 8px;
+        }
+        .exams-wrapper .exams::-webkit-scrollbar-track{
+            background: #EEEEEE;
+        }
+        .exams-wrapper .exams::-webkit-scrollbar-thumb{
+            background: var(--primary-color);
+            border-radius: 8px;
+        }
+        .exams-wrapper .exams .exam-single{
+            position: relative;
+            border: 2px solid var(--primary-color);
+            padding: 15px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+        .control-box{
+            background-color: #01331D;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: all ease-in-out .1s;
+        }
+        .exam-single:hover .control-box{
+            opacity: 1;
+        }
+        .right:hover .control-box{
+            opacity: 1;
+        }
+        .exams-wrapper .exams .exam-single h5{
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        .exams-wrapper .exams .exam-single ul li{
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid #eee;
+            padding: 2px 0;
+            font-weight: 500;
+            color: #000;
+            font-size: 16px;
+        }
+        .exams-wrapper .exams .exam-single ul li:last-child{
+            padding-bottom: 0;
+        }
+        .timer .content-wrapper .right{
+            text-align: center;
+        }
+        .timer .content-wrapper .right .title{
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            /* margin-bottom: 30px; */
+        }
+        .timer .content-wrapper .right .timer-wrapper{
+            padding: 0 60px;
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 25px;
+        }
+        .timer .content-wrapper .right .timer-wrapper .timer-single{
+            font-size: 140px;
+            font-weight: 700;
+            background-color: #084298;
+            flex-grow: 1;
+            padding: 0;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            flex-basis: calc(100% / 3);
+            position: relative;
+        }
+        .timer .content-wrapper .right .timer-wrapper .timer-single::after{
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 10px;
+            left: 0;
+            background-color: var(--primary-dark);
+            z-index: -1;
+            border-radius: 20px;
+        }
+        .timer .content-wrapper .right .timer-wrapper .timer-single span{
+            font-size: 30px;
+            font-weight: 500;
+        }
+        .timer .content-wrapper .right a.start-btn{
+            float: right;
+            display: inline-block;
+            padding: 5px 20px;
+            margin-top: 40px;
+            background-color: #2A72EF;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 30px;
+            transition: 200ms ease-in-out;
+            margin-bottom: 50px;
+            margin-right:60px;
+        }
+        .timer .content-wrapper .right a.start-btn:hover{
+            background-color: #034BC6;
+        }
+        .timer .content-wrapper .right .current-time{
+            clear: both;
+            display: inline-block;
+            border: 2px solid var(--primary-color);
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-top: 40px;
+        }
+        .timer .content-wrapper .right .current-time h5{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--title-color);
+        }
+        .timer .content-wrapper .right .current-time h3{
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 0;
+            color: #555;
+        }
+        .timer .content-wrapper .footer{
+            position: absolute;
+            right: 15px;
+            bottom: 0;
+            margin-bottom: 35px;
+        }
+        .timer .content-wrapper .footer p{
+            margin-bottom: 0;
+            font-size: 11pt;
+        }
+
+img.img-fluid {
+     max-width: 100%;
+    /* margin-left: -403px; */
+    /* margin-right: 3px; */
+    height: auto;
+    /* position: inherit; */
+}
+        @media(max-width: 1400px){
+            /* .timer{
+                padding-top: 30px;
+            } */
+            /* .timer .logo{
+                width: 80px;
+                height: 80px;
+            } */
+            /* .timer .content-wrapper h1{
+                font-size: 30px;
+                line-height: 40px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            } */
+            .timer .content-wrapper .info-pill{
+                margin-bottom: 20px;
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+            .exams-wrapper .title{
+                /* margin-bottom: 10px; */
+            }
+            .exams-wrapper .title h5{
+                font-size: 18px;
+            }
+            .exams-wrapper .title a{
+                font-size: 14px;
+                padding: 0 20px;
+                height: 40px;
+            }
+            .exams-wrapper .exams{
+                padding-right: 15px;
+                /* height: 365px; */
+            }
+            .exams-wrapper .exams .exam-single{
+                padding: 20px;
+            }
+            .exams-wrapper .exams .exam-single h5{
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+            /* .exams-wrapper .exams .exam-single ul li{
+                font-size: 13px;
+                padding: 5px 0; 
+            } */
+            .timer .content-wrapper .right .title{
+                font-size: 25px;
+                /* margin-bottom: 20px; */
+            }
+            .timer .content-wrapper .right .timer-wrapper .timer-single{
+                /* font-size: 70px; */
+            }
+            .timer .content-wrapper .right .timer-wrapper .timer-single span{
+                font-size: 25px;
+            }
+            .timer .content-wrapper .right a.start-btn{
+                /* margin-top: 35px;
+                margin-bottom: 35px; */
+                font-size: 16px;
+                padding: 5px 20px;
+            }
+            .timer .content-wrapper .right .current-time{
+                /* padding: 30px 50px; */
+            }
+            .timer .content-wrapper .right .current-time h5{
+                font-size: 18px;
+            }
+            .timer .content-wrapper .right .current-time h3{
+                font-size: 25px;
+            }
+        }
